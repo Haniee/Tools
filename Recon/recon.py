@@ -21,8 +21,9 @@ def bruteforce():
         print("ERROR: cannot open file")
     for line in f.readlines():
         domain = line.rstrip() + "." + host
-        url_status(domain)
         print(domain)
+        url_status(domain)
+        
 
     print(" ***** Finished searching for easy level subdomains *****")
     try: 
@@ -33,8 +34,8 @@ def bruteforce():
     for line in f.readlines():
         for d in brute_list:
             domain = line.rstrip() + "-" + d.rstrip()
+            print(domain)
             url_status(domain)
-            print(domain) 
     print(" ***** Finished searching for easy level subdomains *****")
 
 
@@ -63,7 +64,7 @@ def url_status(domain):
         r = requests.head(url)
         if(r.status_code != 404):
             url_list[url] = r.status_code
-            update_list(domain)
+            brute_list.append(domain)
             update_wordlist(domain)
     except: 
         print("")
@@ -78,14 +79,6 @@ def check_word(word):
             return False
     return True 
 
-def check_list(domain):
-    for d in brute_list: 
-        if(d == domain):
-            return False 
-    return True 
-
-def update_list(domain):
-    brute_list.append(domain)
  	 
 def update_wordlist(domain):
     #strip word out of domain 
