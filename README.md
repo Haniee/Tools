@@ -1,4 +1,4 @@
 # Tools
 Security Engineering Tools
 
-- finish off second level of bruteforcing 
+- finish off permutation of words for recon
