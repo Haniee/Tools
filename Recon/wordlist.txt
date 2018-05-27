@@ -123,4 +123,4 @@ us
 qa
 na
 eu 
-uk devadmi
+uk 
