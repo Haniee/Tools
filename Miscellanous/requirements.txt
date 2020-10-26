@@ -1,2 +1,3 @@
-keyboard
+python-xlib
+pywin32-219-cp27-none-win32.whl
 
